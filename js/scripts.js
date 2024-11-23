@@ -35,7 +35,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-var ctx = document.getElementById('myChart').getContext('2d');
+
+var ctx = document.getElementById('hotels-vs-hostels').getContext('2d');
 var data = {
 "labels": [
 "June",
@@ -49,39 +50,40 @@ var data = {
 "datasets": [
 {
   "label": "Hotels",
-  "backgroundColor": "#ff2600",
-  "fill": false,
+  "backgroundColor": "#aaadff",
+  "fill": true,
   "data": [
-    "1",
-    "0",
-    "10",
-    "1",
-    "2",
+    "6",
+    "7",
+    "13",
+    "4",
+    "7",
+    "7",
     "2"
   ],
-  "borderColor": "#000000",
+  "borderColor": "#ffffff",
   "borderWidth": "1"
 },
 {
   "label": "Hostels",
-  "backgroundColor": "#0432ff",
-  "fill": false,
+  "backgroundColor": "#407aaa",
+  "fill": true,
   "data": [
-    "7",
-    "8",
-    "0",
-    "7",
-    "9",
+    "1",
+    "13",
+    "1",
+    "6",
+    "13",
+    "4",
     "0"
-  ],
-  "borderWidth": "1"
+  ]
 }
 ]
 };
 var options = {
 "title": {
 "display": true,
-"text": "Hotels vs Hostels Breakdown",
+"text": "Hotels vs Hostels",
 "position": "top",
 "fullWidth": true,
 "fontColor": "#000000",
@@ -106,14 +108,9 @@ var options = {
       "drawTicks": true,
       "tickMarkLength": 1,
       "offsetGridLines": true,
-      "zeroLineColor": "#000000",
+      "zeroLineColor": "#942192",
       "color": "#d6d6d6",
       "zeroLineWidth": 2
-    },
-    "scaleLabel": {
-      "display": false,
-      "labelString": "Number",
-      "fontColor": "#000000"
     },
     "display": true
   }
@@ -134,14 +131,13 @@ var options = {
       "tickMarkLength": 12,
       "zeroLineWidth": 2,
       "offsetGridLines": true,
-      "color": "#000000",
-      "zeroLineColor": "#000000"
+      "color": "#942192",
+      "zeroLineColor": "#942192"
     },
     "scaleLabel": {
       "fontSize": 16,
-      "display": false,
-      "fontStyle": "normal",
-      "labelString": "Months"
+      "display": true,
+      "fontStyle": "normal"
     }
   }
 }
@@ -154,8 +150,8 @@ var options = {
 }
 };
 
-var myChart = new Chart(ctx, {
-    type: 'line',
+var hotelsVsHostels = new Chart(ctx, {
+    type: 'bar',
     data: data,
     options: options
 });
