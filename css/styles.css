@@ -8298,6 +8298,24 @@ textarea.form-control-lg {
   visibility: hidden !important;
 }
 
+.birk {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  clear: both;
+}
+
+.pre-birk {
+  background-color: #f3cf99;
+}
+
+.post-birk {
+  background-color: #775633;
+}
+
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
